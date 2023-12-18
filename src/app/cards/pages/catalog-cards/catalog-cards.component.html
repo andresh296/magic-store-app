@@ -1,0 +1,21 @@
+<div class="col-12 pt-2">
+  <div class="row">
+    <div class="col-md-10">
+      <!-- Search box -->
+      <shared-search-box
+      (onValue)="searchByID($event)"
+      ></shared-search-box>
+    </div>
+  </div>
+
+  <div class="row">
+
+      <cards-box
+        *ngFor="let card of cardsList"
+        [card]="card"
+        class="col-md-2 col-sm-6"
+      ></cards-box>
+
+
+  </div>
+</div>

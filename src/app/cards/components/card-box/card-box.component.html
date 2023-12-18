@@ -1,0 +1,12 @@
+<div class="card mb-2" >
+  <div class="contenedor">
+    <div [ngClass]="{'gradient': card.is_foil}"></div>
+    <img [src]="card.image_uris.normal" class="card-img-top" alt="...">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ card.name }}</h5>
+    <span *ngIf="card.is_foil" class="badge text-bg-warning">Foil</span>
+    <p class="card-text">{{ card.set_name }}</p>
+    <p class="card-text">Disponible: {{ card.amount }}</p>
+  </div>
+</div>
